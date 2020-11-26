@@ -20,6 +20,7 @@ import java.util.Date;
 public class GenericComparator implements Comparator, Serializable {
 	protected static final long serialVersionUID = -2293914106471884607L;
 	protected static final int LESSER = -1;
+	protected static final int LESSER = -1;
 	protected static final int EQUAL = 0;
 	protected static final int GREATER = 1;
 	protected static final String METHOD_GET_PREFIX = "get";
