@@ -19,8 +19,7 @@ import java.util.Date;
 @SuppressWarnings("rawtypes")
 public class GenericComparator implements Comparator, Serializable {
 	protected static final long serialVersionUID = -2293914106471884607L;
-	protected static final int LESSER = -1;
-	protected static final int LESSER = -1;
+	protected static final int LESSER = -1;	
 	protected static final int EQUAL = 0;
 	protected static final int GREATER = 1;
 	protected static final String METHOD_GET_PREFIX = "get";
@@ -114,6 +113,15 @@ public class GenericComparator implements Comparator, Serializable {
 		Object v1,v2;
 		String returnType;
 		try {
+			if(this.targetMethod==null){
+				v1=o1;
+				v2=02;
+				returnType=o1.getClass().getName();
+			}else{
+				v1=getValue(o1);
+				v2=getValue(o2);
+				returnType=getMethod(o1).getReturnType().getName();
+			}
 			if(this.targetMethod==null){
 				v1=o1;
 				v2=02;
